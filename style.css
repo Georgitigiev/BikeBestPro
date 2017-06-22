@@ -7,6 +7,11 @@ Author: LoginOff
 Author URI: https://digitalserv.bitrix24.ru/company/personal/user/196/
 */
 
+/*LoginOff*/
+.footer__wrapper__info--contacts .number a {
+	text-decoration: none;
+	color:#000;
+}
 /*Стили по умолчанию*/
 * {padding: 0;margin: 0}
 body>header, footer, section, article, aside, main, nav, menu {display: block}
@@ -2390,9 +2395,4 @@ header .wrapper__selectCity__pointer {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
-/*LoginOff*/
-.footer__wrapper__info--contacts .number a {
-	text-decoration: none;
-	color:#000;
 }

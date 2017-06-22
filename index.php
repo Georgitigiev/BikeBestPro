@@ -10,12 +10,11 @@
 			$thumb_id = get_post_thumbnail_id();
 			$thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);
 			?>
-
 			  <li class="slide">
 				  <a href="<?php the_permalink(); ?>">
 					<img src="<?=$thumb_url[0]?>" alt="<?php the_title(); ?>">
 				  </a>
-				  <div class="pricesProducts">Гироскутеры<span>от 9 500р</span></div>
+				  <!--<div class="pricesProducts">Гироскутеры<span>от 9 500р</span></div>-->
 			  </li>
 			<?php
 		}

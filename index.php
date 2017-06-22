@@ -2,9 +2,25 @@
   <div class="slider">
     <div class="slider__wrapper" >
       <ul class="slides">
-        <li class="slide"><img src="/media_themes/themes/bikebest/img/slide1.jpg" alt=""><h2></h2><div class="pricesProducts">Гироскутеры<span>от 9 500р</span></div></li>
-        <li class="slide"><img src="/media_themes/themes/bikebest/img/slide1.jpg" alt=""><h2></h2><div class="pricesProducts">Гироскутеры<span>от 9 500р</span></div></li>
-        <li class="slide"><img src="/media_themes/themes/bikebest/img/slide1.jpg" alt=""><h2></h2><div class="pricesProducts">Гироскутеры<span>от 9 500р</span></div></li>
+       	<?php
+		$args = array( 'posts_per_page' => 3 );
+		$lastposts = get_posts( $args );
+		foreach( $lastposts as $post ){
+			setup_postdata($post);
+			$thumb_id = get_post_thumbnail_id();
+			$thumb_url = wp_get_attachment_image_src($thumb_id,'full', true);
+			?>
+
+			  <li class="slide">
+				  <a href="<?php the_permalink(); ?>">
+					<img src="<?=$thumb_url[0]?>" alt="<?php the_title(); ?>">
+				  </a>
+				  <div class="pricesProducts">Гироскутеры<span>от 9 500р</span></div>
+			  </li>
+			<?php
+		}
+		wp_reset_postdata();
+		?>
       </ul>
     </div>
   </div>
